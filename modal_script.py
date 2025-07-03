@@ -5,7 +5,7 @@ app = modal.App('KJ-speedrun')
 training_image = (
     modal.Image.debian_slim(python_version="3.13")
     .apt_install('git')
-    .run_commands(f"git clone https://github.com/KellerJordan/modded-nanogpt.git && cd modded-nanogpt &&"
+    .run_commands(f"https://github.com/eoghanf/GPTSpeedrun && cd modded-nanogpt &&"
     f"pip install -r requirements.txt &&"
     f"pip install --pre torch --index-url https://download.pytorch.org/whl/nightly/cu126 --upgrade &&"
     f"python data/cached_fineweb10B.py 8")
